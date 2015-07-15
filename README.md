@@ -4,7 +4,9 @@ This module demonstrates the capability of the [Mongosync](http://github.com/pat
 It implements into `hook_mongosync_entity_insert_preprocess`, and uses [Distill](http://github.com/patrickocoffeyo/distill) to process the entities into that Mongodb (compatable with a specific Meteor schema) can consume.
 
 ## Purpose
-This module is meant to be a demonstration-piece for [a presentation](https://docs.google.com/presentation/d/1eheh9CTxQHnVVOPlP6iYvQMC-kSOA7UC4wl7nWU1kUo/edit?usp=sharing) on Meteor and Drupal integration, and building reactive Drupal applications. It is purely conception. I'm currently working on other projects that implement the concepts demonstrated in this module in a modular way, so stay tuned :)
+This module is meant to be a demonstration-piece for [a presentation](https://docs.google.com/presentation/d/1eheh9CTxQHnVVOPlP6iYvQMC-kSOA7UC4wl7nWU1kUo/edit?usp=sharing) on Meteor and Drupal integration, and building reactive Drupal applications. It is meant to sync data between a Drupal site, and [this Meteor application](https://github.com/patrickocoffeyo/meteor-introduction).
+
+Keep in mind that this is purely conceptual. I'm currently working on other projects that implement the ideas demonstrated in this module in a modular way, so stay tuned :)
 
 ## Installation
 * Install [Mongosync](http://github.com/patrickocoffeyo/mongosync), and configure it to point to your Meteor app.
