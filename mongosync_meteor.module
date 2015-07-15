@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Contains mongosync_meteor.module.
+ */
+
+use Drupal\distill\Distill;
+use Drupal\distill\DistillProcessor;
+use Drupal\distill_example\DistillTestEntityProcessor;
+
+/**
+ * Implements hook_mongosync_entity_insert().
+ */
+function mongosync_meteor_mongosync_entity_insert_preprocess($entity, $type, $bundle) {
+  // Create instance of processor.
+  $processor = new DistillProcessor();
+
+  // Create instance of Distill.
+  $distiller = new Distill($entity, $processor);
+  $distiller->setField('field_user', 'user');
+  $distiller->setField('field_pizza', 'pizza');
+  $distiller->setField('field_address', 'address');
+
+  return $distiller->getFieldValues() + array('entity_id' => $entity->id());
+}

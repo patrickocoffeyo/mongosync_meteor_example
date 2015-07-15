@@ -1,0 +1,6 @@
+name: mongosync_meteor
+type: module
+description: Mongosync Meteor Connector
+core: 8.x
+package: Other
+
